@@ -1,0 +1,13 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\User" table="users">
+        <unique-constraints>
+            <unique-constraint columns="login,pass" name="login_pass_idx" />
+        </unique-constraints>
+
+        <id name="id" type="user_property" />
+
+        <field name="login" type="user_property" />
+        <field name="phone" type="user_property" />
+        <field name="pass" type="user_property" />
+    </entity>
+</doctrine-mapping>
