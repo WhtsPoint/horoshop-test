@@ -20,5 +20,13 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    App\EventListener\ExceptionEventListener:
+        arguments:
+            - '%env(APP_ENV)%'
+
+    App\JWT\JWT:
+        arguments:
+            - '%env(TOKEN_SECRET)'
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
